@@ -10,9 +10,9 @@
     --secondary-font: "Quicksand";
     --btn-border-color: #020228;
     --btn-bg-color-gradient: linear-gradient(45deg,
-     #9b34ef 0%, 
-     #490cb0 20%,
-      transparent 50%);
+            #9b34ef 0%,
+            #490cb0 20%,
+            transparent 50%);
     --btn-link-bg-color: #fff;
     --btn-link-color: #000;
     --card-bg-color: linear-gradient(0deg, transparent, #3b1e63);
@@ -31,6 +31,21 @@
     --form-field-error: rgb(255, 76, 76);
 
     scroll-behavior: smooth;
+}
+
+/* Custom Scroll */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--tertiary-color);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
 }
 
 * {
@@ -60,19 +75,21 @@ a {
 
     cursor: pointer;
 }
-.btn-section{
+
+.btn-section {
     font-weight: 100;
-    font-size: 14px;
+    font-size: 12px;
 
     background: var(--btn-bg-color-gradient);
     background-size: 300%;
     background-position: left center;
 
-    
+
     border-radius: 50px;
-    
+
 }
-.btn-section:hover{
+
+.btn-section:hover {
     background-position: right center;
     transition: all .7s;
 }

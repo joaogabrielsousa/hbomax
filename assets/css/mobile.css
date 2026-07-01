@@ -21,13 +21,10 @@ header {
 }
 
 .header {
-    height: 50px;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-
-    margin: 10px;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 15px;
 }
 
 .logo {
@@ -53,10 +50,9 @@ header {
 
 }
 
-.btn-header:nth-of-type(1):hover {
+.btn-header:nth-of-type(1) {
     background: #fff;
     color: var(--primary-color);
-    transition: .5s;
 }
 
 .btn-header:nth-of-type(2) {
@@ -80,12 +76,10 @@ MAIN
     align-items: center;
     justify-content: center;
     gap: 20px;
-    
-    padding: 80px 0;
 }
 
 .section-first {
-    height: 100vh;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -100,8 +94,16 @@ MAIN
 
 .picture-demostration {
     display: flex;
+    flex-direction: row;
     align-items: center;
     gap: 10px;
+    height: auto;
+}
+.picture-demostration img {
+    width: 60px;
+}
+.picture-demostration img:nth-of-type(3) {
+    width: 30px;
 }
 
 .text-first {
@@ -181,7 +183,7 @@ SEGUNDA SECTION
 
 .card-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 20px;
@@ -191,7 +193,7 @@ SEGUNDA SECTION
 .card {
     background: var(--card-bg-color);
     border-radius: 10px;
-    width: 400px;
+    width: 300px;
     height: 75vh;
     padding: 20px;
 
@@ -238,59 +240,82 @@ SEGUNDA SECTION
 .btn-plan {
     padding: 10px 25px;
     border: 1px solid var(--secondary-color);
+}
+.btn-plan span {
     font-weight: 800;
-    font-size: 14px;
+    font-size: x-small;
     text-align: center;
     letter-spacing: 3px;
     text-transform: uppercase;
+
+    width: 250px;
 }
+
+
 /*  Terceira Section  */
 .section-tertiary{
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+
+    overflow-x: scroll;
+    padding: 0;
+    margin: 0;
 }
-.cartas-container{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr, 1fr;
-    gap: 50px;
-    margin: 30px 0;
+.txt-cartas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
 }
-.container-img{
-    position: relative;
+.txt-cartas h2{
+    padding: 15px 0;
+    position: absolute;
+}
+.cartas-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 15px;
+    width: 280px;
+    margin: 0;
+}
+.container-img {
+    min-width: 200px;
+    flex-shrink: 0;
 }
 .img-defautl{
     display: block;
     width: 100%;
 }
 .container-img img.hover-img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* ← bom adicionar pra imagem não distorcer */
-  opacity: 0;
-  transition: opacity 0.4s ease; 
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.4s ease;
 }
 
 .container-img:hover img.hover-img {
-  opacity: 1;
-  transform: scale(1.1);
-  transition: opacity 0.4s ease, transform 0.4s ease; /* ← mesma coisa aqui */
+    opacity: 1;
+    transition: opacity 0.7s ease;
 }
-.cartas-img{
-    width: 300px;
+.cartas-img {
+    width: 230px;
     height: 100%;
     border-radius: 10px;
     border: 0 solid transparent;
 }
-
 /*
 FOOTER
 */
 footer{
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 10px;
+
+    margin-top: 20px;
 }
 .container-footer{
     display: flex;
@@ -299,12 +324,13 @@ footer{
 }
 .nav-footer{
     display: flex;
-    flex: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 35px;
+    gap: 20px;
 }
 .txt-footer{
+    font-size: x-small;
     font-family: var(--secondary-font);
     font-weight: 700;
     text-transform: uppercase;
@@ -322,8 +348,9 @@ footer{
     justify-content: center;
 }
 .txt-coppy{
-    font-size: smaller;
-
+    font-size: x-small;
+    margin: 0 10px;
+    text-align: center;
     color: rgb(68, 68, 68);
 }
 .container-sociais{
