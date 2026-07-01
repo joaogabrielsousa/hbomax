@@ -275,7 +275,7 @@ SEGUNDA SECTION
 .container-img:hover img.hover-img {
   opacity: 1;
   transform: scale(1.1);
-  transition: opacity 0.4s ease, transform 0.4s ease; /* ← mesma coisa aqui */
+  transition: opacity 0.4s ease, transform 0.7s ease; /* ← mesma coisa aqui */
 }
 .cartas-img{
     width: 300px;
