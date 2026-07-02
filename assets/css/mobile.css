@@ -1,9 +1,13 @@
-@import url('reset.css');
-@import url('animation.css');
+@import url(reset.css);
+@import url(animation.css);
+@import url(style.css);
 
 :root {
     --bg-black: #000;
 
+}
+*{
+    font-size: 10px;
 }
 
 body {
@@ -79,25 +83,27 @@ MAIN
 }
 
 .section-first {
-    height: 90vh;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
 
     background: var(--bg-color);
     background-size: 400% 400%;
     animation: bg-animation 10s alternate infinite;
 
-    margin: 0 0 20px 0;
 }
 
 .picture-demostration {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     gap: 10px;
-    height: auto;
+
+    max-width: 270px;
 }
 .picture-demostration img {
     width: 60px;
@@ -176,6 +182,8 @@ SEGUNDA SECTION
 
 .h2-aboutPlan {
     margin: 25px 0;
+    width: 270px;
+
     text-align: center;
     font-size: 1.5rem;
     font-weight: 300;
@@ -193,8 +201,8 @@ SEGUNDA SECTION
 .card {
     background: var(--card-bg-color);
     border-radius: 10px;
-    width: 300px;
-    height: 75vh;
+    width: 240px;
+    height: 45vh;
     padding: 20px;
 
     display: flex;
@@ -238,24 +246,26 @@ SEGUNDA SECTION
     align-self: center;
 }
 .btn-plan {
-    padding: 10px 25px;
     border: 1px solid var(--secondary-color);
+    max-width: 280px;
+    width: 250px;
 }
-.btn-plan span {
-    font-weight: 800;
-    font-size: x-small;
+.btn-plan span{
+    font-weight: 600;
+    font-size: 9px;
     text-align: center;
     letter-spacing: 3px;
     text-transform: uppercase;
-
-    width: 250px;
 }
 
 
 /*  Terceira Section  */
 .section-tertiary{
+    max-width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 35px;
 
     overflow-x: scroll;
@@ -269,6 +279,8 @@ SEGUNDA SECTION
     height: 70px;
 }
 .txt-cartas h2{
+    font-size: 1.3rem;
+
     padding: 15px 0;
     position: absolute;
 }
@@ -348,9 +360,12 @@ footer{
     justify-content: center;
 }
 .txt-coppy{
-    font-size: x-small;
     margin: 0 10px;
+    width: 270px;
+    font-size: x-small;
     text-align: center;
+    
+
     color: rgb(68, 68, 68);
 }
 .container-sociais{
