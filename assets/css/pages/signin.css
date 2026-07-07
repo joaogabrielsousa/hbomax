@@ -1,0 +1,241 @@
+@import url(../reset.css);
+@import url(../animation.css);
+
+body{
+    background-color: var(--primary-color);
+    
+}
+header {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    background: #020228af;
+}
+
+.header {
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 10px;
+}
+
+.logo {
+    width: 100px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.header-links {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.btn-header {
+    padding: 5px 15px;
+    font-size: 12px;
+    border-radius: 50px;
+
+}
+
+.btn-header:nth-of-type(1):hover {
+    background: #fff;
+    color: var(--primary-color);
+    transition: .5s;
+}
+
+.btn-header:nth-of-type(2) {
+    background: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+}
+
+.btn-header:nth-of-type(2):hover {
+    border: 1px solid #490cb0;
+    background: transparent;
+
+    transition: .5s;
+}
+
+/*=============
+MAIN 
+=============*/
+main{
+    background-image: url(../../images/background-movies-series.png);
+    background-size: cover;
+    height: 110vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section-container{
+    height: 60vh;
+    width: 70vw;
+    padding: 20px;
+    
+    display: flex;
+    flex-direction: column;
+    
+    background-color: #80808020;
+    
+    border-radius: 15px;
+    box-shadow: 1px 4px 5px rgba(0, 0, 0, .2);
+}
+.first-section{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.first-section div.container-h1{
+    display: flex;
+    align-self: center;
+}
+.first-section div.container-p{
+    width: 49vw;
+}
+.txt-h1{
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.txt-ask{
+
+}
+.formulario-container{
+    display: flex;
+    height: 30vh;
+}
+.formulario{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.input{
+    background-color: transparent;
+    color: #fff;
+
+    height: 50px;
+    width: 46vw;
+    padding: 0 20px;
+    border: 1px solid rgb(255, 254, 254);
+    border-radius: 10px;
+    box-shadow: none;
+}
+.input::placeholder{
+    color: #b7b7b7;
+}
+.input:user-invalid{
+    color: #ffbebe;
+    border-color: #ff0000;
+}
+.btn-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 25px;
+}
+.btn-container button.btn-login{
+    height: 37px;
+    padding: 0 20px;
+    background: var(--btn-bg-color-gradient);
+    background-size: 250%;
+    background-position: left bottom;
+    color: rgb(255, 255, 255);
+    font-family: var(--secondary-font);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+
+    border: 1px solid transparent;
+    border-radius: 50px;
+    box-shadow: none;
+
+    transition: all .7s ease;
+}
+.btn-container button.btn-login:hover{
+    background-position: right top;
+    border: 1px solid var(--secondary-color);
+    cursor: pointer;
+
+}
+a.btn-forgot span{
+    text-transform: none;
+    font-family: var(--secondary-font);
+    font-weight: 700;
+    color: #ababab;
+
+    transition: all .7s ease;
+}
+a.btn-forgot span:hover{
+    color: #fff;
+}
+
+/*==============
+FOOTER
+==============*/
+
+footer{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.container-footer{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.nav-footer{
+    display: flex;
+    flex: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.txt-footer{
+    font-family: var(--secondary-font);
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+
+    letter-spacing: 3px;
+    color: rgb(128, 128, 128);
+    transition: color .7s ease;
+}
+.txt-footer:hover{
+    color: #fff;
+}
+.container-coppy{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.txt-coppy{
+    font-size: smaller;
+
+    color: rgb(68, 68, 68);
+}
+.container-sociais{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+    padding: 0 0 20px 0;
+}
+.container-sociais img:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+
+    
+    transition: all .6s ease;
+}
